@@ -106,7 +106,7 @@ module.exports = {
     tick: function(time){
       // If this value is false, it means that (a) this is a video on a sphere [see init method]
       // and (b) of course, tick is not added
-      if(!this.video_click_event_added && this.data.playOnClick){
+      if(!this.video_click_event_added && this.data.playOnClick && this.material_is_a_video){
         if(typeof(this.el.sceneEl.canvas) !== 'undefined'){
            // Get video DOM
            this.videoEl = this.el.object3D.children[0].material.map.image;
